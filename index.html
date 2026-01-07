@@ -1,42 +1,217 @@
 <!DOCTYPE html>
-<html lang="zh-hans">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Synapse75's website</title>
+    <title>Synapse75 | CSE Student Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Synapse75, a CSE student at CUHK-Shenzhen specializing in Python, C++, and Game Dev.">
     <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
+
 <body>
-    <header>
-        <h1 class="main"><a href="#" onclick="loadPage('home.html')">Synapse75</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="loadPage('home.html')" class="active">主页</a></li>
-                <li><a href="#" onclick="loadPage('projects.html')">作品集</a></li>
-                <li><a href="#" onclick="loadPage('about.html')">个人经历</a></li>
-                <li><a href="#" onclick="loadPage('contact.html')">联系方式</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="#">兴趣</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">学习进度</a></li>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">&lt;Synapse75/&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </aside>
+        </div>
+    </nav>
 
-        <!-- 这里是主要内容区域，JS 会替换这里的内容 -->
-        <main class="content fade" id="content"></main>
+    <!-- Scroll Container -->
+    <div class="scroll-container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="section container">
+            <p class="hero-subtitle">Hi, my name is</p>
+            <h1 class="hero-title">Synapse75</h1>
+            <h2 class="hero-title">I create with <span class="typing-text"
+                    data-text="[Python, C++], [Game Dev engines], [Blender & Aseprite]"></span></h2>
+            <p class="hero-description">
+                I'm a sophomore Computer Science & Engineering student at <strong>CUHK-Shenzhen</strong>. I blend code
+                with creativity, building everything from low-level systems to immersive game worlds.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">My Work</a>
+                <a href="https://github.com/Synapse75" target="_blank" class="btn"><i class="fab fa-github"></i>
+                    GitHub</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section container">
+            <h2>About Me</h2>
+            <div class="about-grid hidden">
+                <div class="about-img-container">
+                    <i class="fas fa-user-astronaut fa-5x"></i>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Hello! I go by <strong>Synapse75</strong> online. I am currently pursuing my degree in Computer
+                        Science and Engineering at <strong style="color: var(--accent-cyan);">The Chinese University of
+                            Hong Kong, Shenzhen</strong>.
+                    </p>
+                    <p>
+                        My passion lies in the intersection of engineering and art. Whether it's optimizing C++ code,
+                        modeling in Blender, or scripting game logic in Godot and Unity, I love bringing ideas to life.
+                    </p>
+                    <p>
+                        I'm always learning and exploring new technologies. Check out my tech stack below!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section container">
+            <h2>Tech Stack</h2>
+            <div class="skills-grid hidden">
+                <!-- Langs -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div> <!-- C++ icon generic code for now -->
+                    <h3>C++</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cube"></i></div>
+                    <h3>Blender</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Godot</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-unity"></i></div>
+                    <h3>Unity</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Aseprite</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <h3>Git</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section container">
+            <h2>Featured Projects</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);">Check out my code on <a
+                    href="https://github.com/Synapse75" target="_blank" style="color: var(--accent-cyan);">GitHub</a>
+            </p>
+            <div class="projects-grid hidden" id="github-projects">
+                <!-- Static placeholders that can be replaced or just linked -->
+                <a href="https://github.com/Synapse75" target="_blank" class="project-card"
+                    style="text-decoration: none;">
+                    <div class="project-img">
+                        <i class="fas fa-gamepad fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Game Dev Project</h3>
+                        <p class="project-desc">
+                            A game built with Godot/Unity showing my game development skills.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Godot</span>
+                            <span class="tech-tag">GDScript</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Synapse75" target="_blank" class="project-card"
+                    style="text-decoration: none;">
+                    <div class="project-img">
+                        <i class="fas fa-cubes fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">3D Rendering Engine</h3>
+                        <p class="project-desc">
+                            A C++ project exploring graphics programming or simulation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">OpenGL</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Synapse75" target="_blank" class="project-card"
+                    style="text-decoration: none;">
+                    <div class="project-img">
+                        <i class="fab fa-python fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Python Script/Tool</h3>
+                        <p class="project-desc">
+                            Automation tool or data analysis script.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container hidden">
+                <p class="contact-text">
+                    Interested in collaborating on a game or a coding project? Feel free to reach out!
+                </p>
+                <div class="social-links"
+                    style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 2rem; font-size: 2rem;">
+                    <a href="https://github.com/Synapse75" target="_blank"
+                        style="color: var(--text-primary); transition: color 0.3s;"><i class="fab fa-github"></i></a>
+                    <a href="mailto:your.email@example.com"
+                        style="color: var(--text-primary); transition: color 0.3s;"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="mailto:your.email@example.com" class="btn btn-primary">Say Hello</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>Designed & Built by Synapse75 &copy; 2026</p>
+            </div>
+        </footer>
+
     </div>
 
-    <footer>
-        <p>&copy; 2025 Synapse75. All rights reserved.</p>
-        <p>Follow me on <a href="https://github.com/synapse75" target="_blank">GitHub</a></p>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
